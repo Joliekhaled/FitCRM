@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitCRM – Client Manager</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>🤸‍♂️ FitCRM 🤸‍♂️</h1>
+        <nav>
+            <button id="tab-form" class="active">Add Client</button>
+            <button id="tab-list">Client List</button>
+        </nav>
+    </header>
+
+    <!-- Page 1: New Client Form -->
+    <section id="page-form">
+        <form class="client-form">
+            <label>
+                Full Name
+                <input type="text" name="fullname" required>
+            </label>
+            <label>
+                Age
+                <input type="number" name="age" min="1" required>
+            </label>
+            <label>
+                Gender
+                <select name="gender" required>
+                    <option value="" disabled selected>Select</option>
+                    <option>Male</option>
+                    <option>Female</option>
+                    <option>Other</option>
+                </select>
+            </label>
+            <label>
+                Email
+                <input type="email" name="email" required>
+            </label>
+            <label>
+                Phone
+                <input type="tel" name="phone" required>
+            </label>
+            <label>
+                Fitness Goal
+                <select name="goal" required>
+                    <option value="" disabled selected>Select</option>
+                    <option>Weight Loss</option>
+                    <option>Muscle Gain</option>
+                    <option>General Fitness</option>
+                    <option>Other</option>
+                </select>
+                <input type="text" name="goal_other" placeholder="If Other, enter here">
+            </label>
+            <label>
+                Membership Start Date
+                <input type="date" name="start_date" required>
+            </label>
+            <button type="button" class="primary-btn">Add Client</button>
+        </form>
+    </section>
+
+   <!-- Page 2: Client List View -->
+<section id="page-list" class="hidden">
+    <div class="search-bar">
+        <input type="text" placeholder="Search by name...">
+    </div>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Fitness Goal</th>
+                <th>Membership Start Date</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+              <td data-label="Name">John Doe</td>
+              <td data-label="Email">john.doe@gmail.com</td>
+              <td data-label="Phone">+20 1111111111</td>
+              <td data-label="Fitness Goal">Weight Loss</td>
+              <td data-label="Start Date">2025-01-01</td>
+              <td data-label="Actions">
+                <button class="edit-btn">Edit</button>
+                <button class="delete-btn">Delete</button>
+              </td>
+            </tr>
+            <tr>
+              <td data-label="Name">Sarah Ali</td>
+              <td data-label="Email">sarah.ali@gmail.com</td>
+              <td data-label="Phone">+20 1222222222</td>
+              <td data-label="Fitness Goal">Muscle Gain</td>
+              <td data-label="Start Date">2025-02-05</td>
+              <td data-label="Actions">
+                <button class="edit-btn">Edit</button>
+                <button class="delete-btn">Delete</button>
+              </td>
+            </tr>
+            <tr>
+              <td data-label="Name">Michael Smith</td>
+              <td data-label="Email">mike.smith@gmail.com</td>
+              <td data-label="Phone">+20 1333333333</td>
+              <td data-label="Fitness Goal">General Fitness</td>
+              <td data-label="Start Date">2025-02-15</td>
+              <td data-label="Actions">
+                <button class="edit-btn">Edit</button>
+                <button class="delete-btn">Delete</button>
+              </td>
+            </tr>
+            <tr>
+              <td data-label="Name">Amina Hassan</td>
+              <td data-label="Email">amina.hassan@gmail.com</td>
+              <td data-label="Phone">+20 1444444444</td>
+              <td data-label="Fitness Goal">Flexibility</td>
+              <td data-label="Start Date">2025-03-01</td>
+              <td data-label="Actions">
+                <button class="edit-btn">Edit</button>
+                <button class="delete-btn">Delete</button>
+              </td>
+            </tr>
+            <tr>
+              <td data-label="Name">David Johnson</td>
+              <td data-label="Email">david.j@gmail.com</td>
+              <td data-label="Phone">+20 1555555555</td>
+              <td data-label="Fitness Goal">Strength Training</td>
+              <td data-label="Start Date">2025-03-12</td>
+              <td data-label="Actions">
+                <button class="edit-btn">Edit</button>
+                <button class="delete-btn">Delete</button>
+              </td>
+            </tr>
+            <tr>
+              <td data-label="Name">Layla Omar</td>
+              <td data-label="Email">layla.omar@gmail.com</td>
+              <td data-label="Phone">+20 1666666666</td>
+              <td data-label="Fitness Goal">Endurance</td>
+              <td data-label="Start Date">2025-03-20</td>
+              <td data-label="Actions">
+                <button class="edit-btn">Edit</button>
+                <button class="delete-btn">Delete</button>
+              </td>
+            </tr>
+            <tr>
+              <td data-label="Name">Chris Evans</td>
+              <td data-label="Email">chris.evans@gmail.com</td>
+              <td data-label="Phone">+20 1777777777</td>
+              <td data-label="Fitness Goal">Cardio</td>
+              <td data-label="Start Date">2025-04-02</td>
+              <td data-label="Actions">
+                <button class="edit-btn">Edit</button>
+                <button class="delete-btn">Delete</button>
+              </td>
+            </tr>
+            <tr>
+              <td data-label="Name">Mona Farid</td>
+              <td data-label="Email">mona.farid@gmail.com</td>
+              <td data-label="Phone">+20 1888888888</td>
+              <td data-label="Fitness Goal">Weight Loss</td>
+              <td data-label="Start Date">2025-04-10</td>
+              <td data-label="Actions">
+                <button class="edit-btn">Edit</button>
+                <button class="delete-btn">Delete</button>
+              </td>
+            </tr>
+            <tr>
+              <td data-label="Name">Ahmed Salah</td>
+              <td data-label="Email">ahmed.salah@gmail.com</td>
+              <td data-label="Phone">+20 1999999999</td>
+              <td data-label="Fitness Goal">Muscle Gain</td>
+              <td data-label="Start Date">2025-04-18</td>
+              <td data-label="Actions">
+                <button class="edit-btn">Edit</button>
+                <button class="delete-btn">Delete</button>
+              </td>
+            </tr>
+            <tr>
+              <td data-label="Name">Emily Brown</td>
+              <td data-label="Email">emily.brown@gmail.com</td>
+              <td data-label="Phone">+20 1010101010</td>
+              <td data-label="Fitness Goal">General Fitness</td>
+              <td data-label="Start Date">2025-05-01</td>
+              <td data-label="Actions">
+                <button class="edit-btn">Edit</button>
+                <button class="delete-btn">Delete</button>
+              </td>
+            </tr>
+          </tbody>
+          
+    </table>
+</section>
+
+    <script>
+      // Simple Tab Switching Logic (no framework required)
+      const tabForm = document.getElementById('tab-form');
+      const tabList = document.getElementById('tab-list');
+      const pageForm = document.getElementById('page-form');
+      const pageList = document.getElementById('page-list');
+      tabForm.onclick = function(){
+        tabForm.classList.add('active');
+        tabList.classList.remove('active');
+        pageForm.classList.remove('hidden');
+        pageList.classList.add('hidden');
+      };
+      tabList.onclick = function(){
+        tabList.classList.add('active');
+        tabForm.classList.remove('active');
+        pageList.classList.remove('hidden');
+        pageForm.classList.add('hidden');
+      };
+    </script>
+</body>
+</html>

@@ -1,0 +1,166 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #f7f8fa;
+}
+header {
+  background: #1d8ccd;
+  color: #f4f4f4;
+  padding: 16px 0 8px;
+  text-align: center;
+}
+nav {
+  margin-top: 8px;
+}
+nav button {
+  background: #fff;
+  color: #2b4162;
+  border: none;
+  padding: 8px 18px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin: 0 5px;
+  border-radius: 3px 3px 0 0;
+  border-bottom: 2px solid transparent;
+}
+nav button.active, nav button:hover {
+  border-bottom: 2px solid #1d8ccd;
+  color: #1d8ccd;
+}
+section {
+  max-width: 1050px;
+  margin: 32px auto;
+  padding: 18px;
+  background: #fff;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(180,180,180,0.1);
+}
+.hidden {
+  display: none;
+}
+.client-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  flex-direction: column;
+}
+.client-form label {
+  display: flex;
+  flex-direction: column;
+  font-size: 1rem;
+  color: #2b4162;
+}
+.client-form input, .client-form select {
+  padding: 6px 8px;
+  margin-top: 3px;
+  border: 1px solid #d5d7d9;
+  border-radius: 3px;
+  font-size: 1rem;
+}
+.primary-btn {
+  background: #1d8ccd;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 8px;
+}
+.search-bar {
+  margin-bottom: 14px;
+  text-align: right;
+}
+.search-bar input {
+  padding: 6px 12px;
+  width: 20%;
+  border: 1px solid #bdbdbd;
+  border-radius: 3px;
+  font-size: 1rem;
+}
+/* Existing table styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  /* other styles */
+}
+
+/* Increase phone column width */
+table th:nth-child(3),
+table td:nth-child(3) {
+  min-width: 140px; /* or your desired width */
+}
+/* Increase fitness goal column width */
+table th:nth-child(4),
+table td:nth-child(4) {
+    min-width: 140px;
+}
+/* Increase name column width */
+table th:nth-child(1),
+table td:nth-child(1) {
+    min-width: 140px;
+}
+/* Increase membership start date  width */
+table th:nth-child(5),
+table td:nth-child(5) {
+    min-width: 160px;
+}
+
+/* Continue other styles for th, td, etc. */
+th, td {
+  padding: 12px 8px;
+  border-bottom: 1px solid #ededed;
+  text-align: left;
+}
+th {
+  color: #2b4162;
+  font-weight: bold;
+  background: #f6f9fb;
+}
+.edit-btn, .delete-btn {
+  padding: 5px 12px;
+  margin-right: 4px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.edit-btn {
+  background: #6a8caf;
+  color: #fff;
+}
+.delete-btn {
+  background: #ff6b6b;
+  color: #fff;
+}
+/* Responsive */
+@media (max-width: 650px) {
+  section {
+      padding: 10px;
+  }
+  table, thead, tbody, th, td, tr {
+      display: block;
+  }
+  tr {
+      margin-bottom: 14px;
+      background: #fafbfc;
+      border-radius: 5px;
+      box-shadow: 0 1px 3px #ddd;
+      padding: 8px 0;
+  }
+  th {
+      display: none;
+  }
+  td {
+      position: relative;
+      padding-left: 40%;
+  }
+  td::before {
+      content: attr(data-label);
+      position: absolute;
+      left: 10px;
+      font-weight: bold;
+      color: #888;
+      min-width: 120px;
+  }
+}
