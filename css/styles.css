@@ -1,65 +1,86 @@
+/* General page styles */
 body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  background: #f7f8fa;
+  font-family: Arial, sans-serif;   /* Default font */
+  margin: 0;                        /* Remove default spacing */
+  background: #f7f8fa;              /* Light gray background */
 }
+
+/* Header styles */
 header {
-  background: #1d8ccd;
-  color: #f4f4f4;
-  padding: 16px 0 8px;
-  text-align: center;
+  background: #1d8ccd;              /* Blue background */
+  color: #f4f4f4;                   /* Light text color */
+  padding: 16px 0 8px;              /* Top, right/left, bottom padding */
+  text-align: center;               /* Centered text */
 }
+
+/* Navigation bar */
 nav {
   margin-top: 8px;
 }
+
+/* Navigation buttons */
 nav button {
-  background: #fff;
-  color: #2b4162;
-  border: none;
-  padding: 8px 18px;
-  font-size: 1rem;
-  cursor: pointer;
-  margin: 0 5px;
-  border-radius: 3px 3px 0 0;
-  border-bottom: 2px solid transparent;
+  background: #fff;                 /* White background */
+  color: #2b4162;                   /* Dark text */
+  border: none;                     /* No border */
+  padding: 8px 18px;                /* Button padding */
+  font-size: 1rem;                  /* Normal font size */
+  cursor: pointer;                  /* Pointer on hover */
+  margin: 0 5px;                    /* Horizontal spacing */
+  border-radius: 3px 3px 0 0;       /* Rounded top corners */
+  border-bottom: 2px solid transparent; /* Invisible bottom border */
 }
+
+/* Active tab + Hover effect */
 nav button.active, nav button:hover {
-  border-bottom: 2px solid #1d8ccd;
-  color: #1d8ccd;
+  border-bottom: 2px solid #1d8ccd; /* Blue underline */
+  color: #1d8ccd;                   /* Blue text */
 }
+
+/* Section container (form or list) */
 section {
-  max-width: 1050px;
-  margin: 32px auto;
+  max-width: 1050px;                /* Limit width */
+  margin: 32px auto;                /* Center with spacing */
   padding: 18px;
-  background: #fff;
-  border-radius: 6px;
-  box-shadow: 0 2px 8px rgba(180,180,180,0.1);
+  background: #fff;                 /* White background */
+  border-radius: 6px;               /* Rounded corners */
+  box-shadow: 0 2px 8px rgba(180,180,180,0.1); /* Subtle shadow */
 }
+
+/* Hide elements */
 .hidden {
   display: none;
 }
+
+/* Client form layout */
 .client-form {
   display: flex;
   flex-wrap: wrap;
   gap: 18px;
-  flex-direction: column;
+  flex-direction: column;           /* Stack labels vertically */
 }
+
+/* Each label (field title + input) */
 .client-form label {
   display: flex;
-  flex-direction: column;
+  flex-direction: column;           /* Label text above input */
   font-size: 1rem;
-  color: #2b4162;
+  color: #2b4162;                   /* Dark blue text */
 }
+
+/* Form inputs and dropdowns */
 .client-form input, .client-form select {
   padding: 6px 8px;
   margin-top: 3px;
-  border: 1px solid #d5d7d9;
+  border: 1px solid #d5d7d9;        /* Light border */
   border-radius: 3px;
   font-size: 1rem;
 }
+
+/* Primary button styling */
 .primary-btn {
-  background: #1d8ccd;
-  color: #fff;
+  background: #1d8ccd;              /* Blue background */
+  color: #fff;                      /* White text */
   border: none;
   padding: 10px 20px;
   font-weight: bold;
@@ -68,72 +89,74 @@ section {
   cursor: pointer;
   margin-top: 8px;
 }
+
+/* Search bar above client list */
 .search-bar {
   margin-bottom: 14px;
-  text-align: right;
+  text-align: right;                /* Align right on desktop */
 }
 
+/* Search input field */
 .search-bar input {
   padding: 6px 12px;
-  width: 100%;              /* take full width by default */
-  max-width: 300px;         /* but don’t stretch too much on desktop */
+  width: 100%;              /* Take full width by default */
+  max-width: 300px;         /* Limit width on desktop */
   border: 1px solid #bdbdbd;
   border-radius: 3px;
   font-size: 1rem;
-  box-sizing: border-box;   /* keep padding inside width */
+  box-sizing: border-box;   /* Include padding in width */
 }
 
-/* On small screens, force full width */
+/* Responsive search bar (mobile view) */
 @media (max-width: 600px) {
   .search-bar {
-    text-align: center;   /* center it on mobile */
+    text-align: center;     /* Center align on mobile */
   }
 
   .search-bar input {
-    width: 90%;           /* almost full screen */
-    max-width: none;      /* remove the limit */
+    width: 90%;             /* Almost full screen */
+    max-width: none;        /* Remove limit */
   }
 }
 
-/* Existing table styles */
+/* Table styles */
 table {
   width: 100%;
-  border-collapse: collapse;
+  border-collapse: collapse; /* Merge borders */
   /* other styles */
 }
 
-/* Increase phone column width */
+/* Column width adjustments */
 table th:nth-child(3),
 table td:nth-child(3) {
-  min-width: 140px; /* or your desired width */
+  min-width: 140px; /* Phone column */
 }
-/* Increase fitness goal column width */
 table th:nth-child(4),
 table td:nth-child(4) {
-    min-width: 140px;
+  min-width: 140px; /* Fitness goal column */
 }
-/* Increase name column width */
 table th:nth-child(1),
 table td:nth-child(1) {
-    min-width: 140px;
+  min-width: 140px; /* Name column */
 }
-/* Increase membership start date  width */
 table th:nth-child(5),
 table td:nth-child(5) {
-    min-width: 160px;
+  min-width: 160px; /* Start date column */
 }
 
-/* Continue other styles for th, td, etc. */
+/* Table cell styles */
 th, td {
   padding: 12px 8px;
-  border-bottom: 1px solid #ededed;
+  border-bottom: 1px solid #ededed; /* Light line between rows */
   text-align: left;
 }
 th {
-  color: #2b4162;
+  color: #2b4162;                   /* Dark header text */
   font-weight: bold;
-  background: #f6f9fb;
+  background: #f6f9fb;              /* Light gray header background */
 }
+
+/* Edit/Delete button styles */
 .edit-btn, .delete-btn {
   padding: 5px 12px;
   margin-right: 4px;
@@ -142,20 +165,21 @@ th {
   cursor: pointer;
 }
 .edit-btn {
-  background: #6a8caf;
+  background: #6a8caf;              /* Grayish blue */
   color: #fff;
 }
 .delete-btn {
-  background: #ff6b6b;
+  background: #ff6b6b;              /* Red */
   color: #fff;
 }
-/* Responsive */
+
+/* Responsive table for mobile */
 @media (max-width: 650px) {
   section {
-      padding: 10px;
+      padding: 10px;                /* Smaller padding */
   }
   table, thead, tbody, th, td, tr {
-      display: block;
+      display: block;               /* Convert table to blocks */
   }
   tr {
       margin-bottom: 14px;
@@ -165,14 +189,14 @@ th {
       padding: 8px 0;
   }
   th {
-      display: none;
+      display: none;                /* Hide table headers */
   }
   td {
       position: relative;
-      padding-left: 40%;
+      padding-left: 40%;            /* Leave space for label */
   }
   td::before {
-      content: attr(data-label);
+      content: attr(data-label);    /* Show column label before value */
       position: absolute;
       left: 10px;
       font-weight: bold;

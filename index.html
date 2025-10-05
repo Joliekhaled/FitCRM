@@ -1,31 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Character encoding and viewport settings for responsiveness -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Page title (shown in browser tab) -->
     <title>FitCRM – Client Manager</title>
+
+    <!-- External CSS file for styling -->
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+    <!-- Website Header: Logo/Title + Navigation Tabs -->
     <header>
         <h1>🤸‍♂️ FitCRM 🤸‍♂️</h1>
         <nav>
+            <!-- Two buttons act as "tabs" for switching between form and list -->
             <button id="tab-form" class="active">Add Client</button>
             <button id="tab-list">Client List</button>
         </nav>
     </header>
 
-    <!-- Page 1: New Client Form -->
+    <!-- Page 1: New Client Form Section -->
     <section id="page-form">
         <form class="client-form">
+            <!-- Client Name -->
             <label>
                 Full Name
                 <input type="text" name="fullname" required>
             </label>
+
+            <!-- Client Age -->
             <label>
                 Age
                 <input type="number" name="age" min="1" required>
             </label>
+
+            <!-- Client Gender -->
             <label>
                 Gender
                 <select name="gender" required>
@@ -35,14 +47,20 @@
                     <option>Other</option>
                 </select>
             </label>
+
+            <!-- Client Email -->
             <label>
                 Email
                 <input type="email" name="email" required>
             </label>
+
+            <!-- Client Phone Number -->
             <label>
                 Phone
                 <input type="tel" name="phone" required>
             </label>
+
+            <!-- Fitness Goal + Optional 'Other' input field -->
             <label>
                 Fitness Goal
                 <select name="goal" required>
@@ -52,24 +70,33 @@
                     <option>General Fitness</option>
                     <option>Other</option>
                 </select>
+                <!-- If 'Other' is chosen, user can enter a custom goal -->
                 <input type="text" name="goal_other" placeholder="If Other, enter here">
             </label>
+
+            <!-- Membership Start Date -->
             <label>
                 Membership Start Date
                 <input type="date" name="start_date" required>
             </label>
+
+            <!-- Submit button (currently type="button" so it won’t submit yet) -->
             <button type="button" class="primary-btn">Add Client</button>
         </form>
     </section>
 
-   <!-- Page 2: Client List View -->
+   <!-- Page 2: Client List Section (Initially Hidden) -->
 <section id="page-list" class="hidden">
+    <!-- Search bar for filtering clients by name -->
     <div class="search-bar">
         <input type="text" placeholder="Search by name...">
     </div>
+
+    <!-- Table displaying client records -->
     <table>
         <thead>
             <tr>
+                <!-- Table Headings -->
                 <th>Name</th>
                 <th>Email</th>
                 <th>Phone</th>
@@ -79,6 +106,7 @@
             </tr>
         </thead>
         <tbody>
+            <!-- Example client rows (static data for now) -->
             <tr>
               <td data-label="Name">Wassim Sabry</td>
               <td data-label="Email">weza.sabr@gmail.com</td>
@@ -86,10 +114,12 @@
               <td data-label="Fitness Goal">Weight Loss</td>
               <td data-label="Start Date">2025-01-01</td>
               <td data-label="Actions">
+                <!-- Action buttons -->
                 <button class="edit-btn">Edit</button>
                 <button class="delete-btn">Delete</button>
               </td>
             </tr>
+            <!-- Additional sample clients -->
             <tr>
               <td data-label="Name">Sarah Ali</td>
               <td data-label="Email">sarah.ali@gmail.com</td>
@@ -190,27 +220,30 @@
               </td>
             </tr>
           </tbody>
-          
     </table>
 </section>
 
     <script>
-      // Simple Tab Switching Logic (no framework required)
+      // Tab Switching Logic (switches between Add Client form and Client List)
       const tabForm = document.getElementById('tab-form');
       const tabList = document.getElementById('tab-list');
       const pageForm = document.getElementById('page-form');
       const pageList = document.getElementById('page-list');
+
+      // When "Add Client" tab is clicked:
       tabForm.onclick = function(){
-        tabForm.classList.add('active');
-        tabList.classList.remove('active');
-        pageForm.classList.remove('hidden');
-        pageList.classList.add('hidden');
+        tabForm.classList.add('active');     // Highlight current tab
+        tabList.classList.remove('active'); // Remove highlight from other tab
+        pageForm.classList.remove('hidden'); // Show form
+        pageList.classList.add('hidden');   // Hide client list
       };
+
+      // When "Client List" tab is clicked:
       tabList.onclick = function(){
-        tabList.classList.add('active');
-        tabForm.classList.remove('active');
-        pageList.classList.remove('hidden');
-        pageForm.classList.add('hidden');
+        tabList.classList.add('active');    // Highlight current tab
+        tabForm.classList.remove('active'); // Remove highlight from other tab
+        pageList.classList.remove('hidden'); // Show client list
+        pageForm.classList.add('hidden');   // Hide form
       };
     </script>
 </body>
