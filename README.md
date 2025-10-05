@@ -19,16 +19,12 @@ fitcrm/
 │   └── styles.css
 └── README.md
 
-## Deployment
+## Deployment used
 Option 1 — GitHub Pages:
 1. Push repository to GitHub (public).
 2. Go to repo → Settings → Pages → Select `main` branch and `/root` (or `/docs`) folder → Save.
 3. Wait a minute, then your site will be available at: `https://<username>.github.io/<repo>/`.
 
-Option 2 — Netlify:
-1. Create account at netlify.com.
-2. Add New site → Import from GitHub → select repo → Deploy.
-3. Netlify provides a live URL.
 
 ## Notes for graders
 - Add Client, Edit, and Delete are placeholders per assignment (no server/persistence required).
