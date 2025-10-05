@@ -27,7 +27,7 @@ The app allows adding new clients, viewing a client list, and switching between 
 ## 🛠️ Tech Stack
 - **HTML5**
 - **CSS3** (Responsive design with media queries)
-- **Vanilla JavaScript** (Tab switching logic)
+- **Vanilla JavaScript** (Minimal for just Tab switching logic)
 
 ---
 
@@ -41,11 +41,10 @@ fitcrm/
 └── README.md
 
 ## Deployment used
-Option 1 — GitHub Pages:
-1. Push repository to GitHub (public).
-2. Go to repo → Settings → Pages → Select `main` branch and `/root` (or `/docs`) folder → Save.
-3. Wait a minute, then your site will be available at: `https://<username>.github.io/<repo>/`.
+This project is deployed using **GitHub Pages**.  
 
+- **Live App:** [FitCRM](https://joliekhaled.github.io/FitCRM/)  
+- **GitHub Repository:** [FitCRM Repo](https://github.com/joliekhaled/FitCRM)  
 
 ## Notes for graders
 - Add Client, Edit, and Delete are placeholders per assignment (no server/persistence required).
