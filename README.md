@@ -1,16 +1,37 @@
-# FitCRM — Simple Client Manager (Frontend Prototype)
+# FitCRM – Simple Client Manager for a Fitness Program
 
-## Description
-FitCRM is a lightweight frontend-only CRM webapp prototype for fitness instructors, personal trainers, and small gym owners. It contains:
-- New Client form (placeholder Add Client button)
-- Client List with 10 sample clients
-- Search by client name (client-side)
-- Responsive layout (Flexbox + Grid)
+🤸‍♂️ **FitCRM** is a simple, frontend-only web-based system designed for fitness instructors, trainers, and small gym owners to keep track of their clients.  
 
-## Tech stack
-- HTML5
-- CSS3 (Flexbox & Grid, responsive)
-- Vanilla JavaScript (small amount for page navigation and client-side search)
+The app allows adding new clients, viewing a client list, and switching between pages with a clean and responsive design.
+
+---
+
+##  Features
+- **Add Client Form**  
+  Collects client details: name, age, gender, email, phone, fitness goal, and membership start date.  
+
+- **Client List View**  
+  Displays existing clients in a table with actions (`Edit`, `Delete`).  
+
+- **Search**  
+  Search bar to filter clients by name.  
+
+- **Responsive Design**  
+  Works on both **desktop** and **mobile** screens.  
+
+- **Simple Navigation**  
+  Tabs for switching between "Add Client" and "Client List".  
+
+---
+
+## 🛠️ Tech Stack
+- **HTML5**
+- **CSS3** (Responsive design with media queries)
+- **Vanilla JavaScript** (Tab switching logic)
+
+---
+
+## 📂 Project Structure
 
 ## File structure
 fitcrm/
