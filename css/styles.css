@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* ===== General Page Styles ===== */
 body {
     font-family: Arial, sans-serif; /* Set default font */
@@ -40,10 +41,29 @@ header {
     color: #e0f2ff;  /* Light blue subheading */
 }
 
+=======
+/* General page styles */
+body {
+  font-family: Arial, sans-serif;   /* Default font */
+  margin: 0;                        /* Remove default spacing */
+  background: #f7f8fa;              /* Light gray background */
+}
+
+/* Header styles */
+header {
+  background: #1d8ccd;              /* Blue background */
+  color: #f4f4f4;                   /* Light text color */
+  padding: 16px 0 8px;              /* Top, right/left, bottom padding */
+  text-align: center;               /* Centered text */
+}
+
+/* Navigation bar */
+>>>>>>> 8b6c166dcc0968e0152f8d76685d7b30eae98ed4
 nav {
     margin-top: 12px; /* Space above nav */
 }
 
+<<<<<<< HEAD
 nav button {
     background: #fff; /* White button background */
     color: #2b4162; /* Button text color */
@@ -93,6 +113,35 @@ section {
     background: #fff; /* White background */
     border-radius: 8px; /* Rounded corners */
     box-shadow: 0 3px 10px rgba(0,0,0,0.05); /* Subtle shadow */
+=======
+/* Navigation buttons */
+nav button {
+  background: #fff;                 /* White background */
+  color: #2b4162;                   /* Dark text */
+  border: none;                     /* No border */
+  padding: 8px 18px;                /* Button padding */
+  font-size: 1rem;                  /* Normal font size */
+  cursor: pointer;                  /* Pointer on hover */
+  margin: 0 5px;                    /* Horizontal spacing */
+  border-radius: 3px 3px 0 0;       /* Rounded top corners */
+  border-bottom: 2px solid transparent; /* Invisible bottom border */
+}
+
+/* Active tab + Hover effect */
+nav button.active, nav button:hover {
+  border-bottom: 2px solid #1d8ccd; /* Blue underline */
+  color: #1d8ccd;                   /* Blue text */
+}
+
+/* Section container (form or list) */
+section {
+  max-width: 1050px;                /* Limit width */
+  margin: 32px auto;                /* Center with spacing */
+  padding: 18px;
+  background: #fff;                 /* White background */
+  border-radius: 6px;               /* Rounded corners */
+  box-shadow: 0 2px 8px rgba(180,180,180,0.1); /* Subtle shadow */
+>>>>>>> 8b6c166dcc0968e0152f8d76685d7b30eae98ed4
 }
 
 /* Hide elements */
@@ -100,6 +149,7 @@ section {
     display: none; /* Hide element completely */
 }
 
+<<<<<<< HEAD
 /* ===== Client Form ===== */
 .client-form {
     display: flex; /* Flex layout for form */
@@ -144,9 +194,55 @@ section {
 .search-bar {
     margin-bottom: 16px; /* Space below search bar */
     text-align: right; /* Align search bar to right */
+=======
+/* Client form layout */
+.client-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  flex-direction: column;           /* Stack labels vertically */
 }
 
+/* Each label (field title + input) */
+.client-form label {
+  display: flex;
+  flex-direction: column;           /* Label text above input */
+  font-size: 1rem;
+  color: #2b4162;                   /* Dark blue text */
+}
+
+/* Form inputs and dropdowns */
+.client-form input, .client-form select {
+  padding: 6px 8px;
+  margin-top: 3px;
+  border: 1px solid #d5d7d9;        /* Light border */
+  border-radius: 3px;
+  font-size: 1rem;
+}
+
+/* Primary button styling */
+.primary-btn {
+  background: #1d8ccd;              /* Blue background */
+  color: #fff;                      /* White text */
+  border: none;
+  padding: 10px 20px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 8px;
+}
+
+/* Search bar above client list */
+.search-bar {
+  margin-bottom: 14px;
+  text-align: right;                /* Align right on desktop */
+>>>>>>> 8b6c166dcc0968e0152f8d76685d7b30eae98ed4
+}
+
+/* Search input field */
 .search-bar input {
+<<<<<<< HEAD
     padding: 6px 12px; /* Input padding */
     width: 100%; /* Full width */
     max-width: 300px; /* Limit max width */
@@ -285,4 +381,111 @@ td[data-label="Actions"] .action-btn {
         color: #888; /* Gray color */
         min-width: 120px; /* Minimum label width */
     }
+=======
+  padding: 6px 12px;
+  width: 100%;              /* Take full width by default */
+  max-width: 300px;         /* Limit width on desktop */
+  border: 1px solid #bdbdbd;
+  border-radius: 3px;
+  font-size: 1rem;
+  box-sizing: border-box;   /* Include padding in width */
+}
+
+/* Responsive search bar (mobile view) */
+@media (max-width: 600px) {
+  .search-bar {
+    text-align: center;     /* Center align on mobile */
+  }
+
+  .search-bar input {
+    width: 90%;             /* Almost full screen */
+    max-width: none;        /* Remove limit */
+  }
+}
+
+/* Table styles */
+table {
+  width: 100%;
+  border-collapse: collapse; /* Merge borders */
+  /* other styles */
+}
+
+/* Column width adjustments */
+table th:nth-child(3),
+table td:nth-child(3) {
+  min-width: 140px; /* Phone column */
+}
+table th:nth-child(4),
+table td:nth-child(4) {
+  min-width: 140px; /* Fitness goal column */
+}
+table th:nth-child(1),
+table td:nth-child(1) {
+  min-width: 140px; /* Name column */
+}
+table th:nth-child(5),
+table td:nth-child(5) {
+  min-width: 160px; /* Start date column */
+}
+
+/* Table cell styles */
+th, td {
+  padding: 12px 8px;
+  border-bottom: 1px solid #ededed; /* Light line between rows */
+  text-align: left;
+}
+th {
+  color: #2b4162;                   /* Dark header text */
+  font-weight: bold;
+  background: #f6f9fb;              /* Light gray header background */
+}
+
+/* Edit/Delete button styles */
+.edit-btn, .delete-btn {
+  padding: 5px 12px;
+  margin-right: 4px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.edit-btn {
+  background: #6a8caf;              /* Grayish blue */
+  color: #fff;
+}
+.delete-btn {
+  background: #ff6b6b;              /* Red */
+  color: #fff;
+}
+
+/* Responsive table for mobile */
+@media (max-width: 650px) {
+  section {
+      padding: 10px;                /* Smaller padding */
+  }
+  table, thead, tbody, th, td, tr {
+      display: block;               /* Convert table to blocks */
+  }
+  tr {
+      margin-bottom: 14px;
+      background: #fafbfc;
+      border-radius: 5px;
+      box-shadow: 0 1px 3px #ddd;
+      padding: 8px 0;
+  }
+  th {
+      display: none;                /* Hide table headers */
+  }
+  td {
+      position: relative;
+      padding-left: 40%;            /* Leave space for label */
+  }
+  td::before {
+      content: attr(data-label);    /* Show column label before value */
+      position: absolute;
+      left: 10px;
+      font-weight: bold;
+      color: #888;
+      min-width: 120px;
+  }
+>>>>>>> 8b6c166dcc0968e0152f8d76685d7b30eae98ed4
 }

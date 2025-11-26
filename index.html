@@ -13,6 +13,7 @@
 </head>
 <body>
     <!-- Website Header: Logo/Title + Navigation Tabs -->
+<<<<<<< HEAD
    <header>
   <div class="header-content">
     <h1>🤸‍♂️ FitLife Client Manager 🤸‍♂️</h1>
@@ -31,6 +32,20 @@
             <!-- Hidden input to store editing id -->
             <input type="hidden" name="client_id" id="client_id" value="">
 
+=======
+    <header>
+        <h1>🤸‍♂️ FitCRM 🤸‍♂️</h1>
+        <nav>
+            <!-- Two buttons act as "tabs" for switching between form and list -->
+            <button id="tab-form" class="active">Add Client</button>
+            <button id="tab-list">Client List</button>
+        </nav>
+    </header>
+
+    <!-- Page 1: New Client Form Section -->
+    <section id="page-form">
+        <form class="client-form">
+>>>>>>> 8b6c166dcc0968e0152f8d76685d7b30eae98ed4
             <!-- Client Name -->
             <label>
                 Full Name
@@ -77,7 +92,11 @@
                     <option>Other</option>
                 </select>
                 <!-- If 'Other' is chosen, user can enter a custom goal -->
+<<<<<<< HEAD
                 <input type="text" name="goal_other" id="goal_other" placeholder="If Other, enter here">
+=======
+                <input type="text" name="goal_other" placeholder="If Other, enter here">
+>>>>>>> 8b6c166dcc0968e0152f8d76685d7b30eae98ed4
             </label>
 
             <!-- Membership Start Date -->
@@ -86,11 +105,16 @@
                 <input type="date" name="start_date" id="start_date" required>
             </label>
 
+<<<<<<< HEAD
             <!-- Submit button -->
             <button type="submit" id="add-client-btn" class="primary-btn">Add Client</button>
 
             <!-- Cancel edit button (hidden by default) -->
             <button type="button" id="cancel-edit-btn" class="primary-btn hidden" style="background:#6a8caf; margin-left:8px;">Cancel Edit</button>
+=======
+            <!-- Submit button (currently type="button" so it won’t submit yet) -->
+            <button type="button" class="primary-btn">Add Client</button>
+>>>>>>> 8b6c166dcc0968e0152f8d76685d7b30eae98ed4
         </form>
     </section>
 
@@ -114,6 +138,7 @@
                 <th>Actions</th>
             </tr>
         </thead>
+<<<<<<< HEAD
         <tbody id="clients-tbody">
             <!-- Rows inserted dynamically -->
         </tbody>
@@ -149,5 +174,148 @@
     <div id="exercises-next"></div>
 </div>
 
+=======
+        <tbody>
+            <!-- Example client rows (static data for now) -->
+            <tr>
+              <td data-label="Name">Wassim Sabry</td>
+              <td data-label="Email">weza.sabr@gmail.com</td>
+              <td data-label="Phone">+20 1212973618</td>
+              <td data-label="Fitness Goal">Weight Loss</td>
+              <td data-label="Start Date">2025-01-01</td>
+              <td data-label="Actions">
+                <!-- Action buttons -->
+                <button class="edit-btn">Edit</button>
+                <button class="delete-btn">Delete</button>
+              </td>
+            </tr>
+            <!-- Additional sample clients -->
+            <tr>
+              <td data-label="Name">Sarah Ali</td>
+              <td data-label="Email">sarah.ali@gmail.com</td>
+              <td data-label="Phone">+20 1237983620</td>
+              <td data-label="Fitness Goal">Muscle Gain</td>
+              <td data-label="Start Date">2025-02-05</td>
+              <td data-label="Actions">
+                <button class="edit-btn">Edit</button>
+                <button class="delete-btn">Delete</button>
+              </td>
+            </tr>
+            <tr>
+              <td data-label="Name">Michael Girgis</td>
+              <td data-label="Email">mike.gi@gmail.com</td>
+              <td data-label="Phone">+20 1112900018</td>
+              <td data-label="Fitness Goal">General Fitness</td>
+              <td data-label="Start Date">2025-02-15</td>
+              <td data-label="Actions">
+                <button class="edit-btn">Edit</button>
+                <button class="delete-btn">Delete</button>
+              </td>
+            </tr>
+            <tr>
+              <td data-label="Name">Amina Hassan</td>
+              <td data-label="Email">amina.hassan@gmail.com</td>
+              <td data-label="Phone">+20 1014993119</td>
+              <td data-label="Fitness Goal">Flexibility</td>
+              <td data-label="Start Date">2025-03-01</td>
+              <td data-label="Actions">
+                <button class="edit-btn">Edit</button>
+                <button class="delete-btn">Delete</button>
+              </td>
+            </tr>
+            <tr>
+              <td data-label="Name">David Jameel</td>
+              <td data-label="Email">david.j@gmail.com</td>
+              <td data-label="Phone">+20 1200473817</td>
+              <td data-label="Fitness Goal">Strength Training</td>
+              <td data-label="Start Date">2025-03-12</td>
+              <td data-label="Actions">
+                <button class="edit-btn">Edit</button>
+                <button class="delete-btn">Delete</button>
+              </td>
+            </tr>
+            <tr>
+              <td data-label="Name">Layla Omar</td>
+              <td data-label="Email">layla.omar@gmail.com</td>
+              <td data-label="Phone">+20 1222843618</td>
+              <td data-label="Fitness Goal">Endurance</td>
+              <td data-label="Start Date">2025-03-20</td>
+              <td data-label="Actions">
+                <button class="edit-btn">Edit</button>
+                <button class="delete-btn">Delete</button>
+              </td>
+            </tr>
+            <tr>
+              <td data-label="Name">Chris Evans</td>
+              <td data-label="Email">chris.evans@gmail.com</td>
+              <td data-label="Phone">+20 1221133618</td>
+              <td data-label="Fitness Goal">Cardio</td>
+              <td data-label="Start Date">2025-04-02</td>
+              <td data-label="Actions">
+                <button class="edit-btn">Edit</button>
+                <button class="delete-btn">Delete</button>
+              </td>
+            </tr>
+            <tr>
+              <td data-label="Name">Mona Farid</td>
+              <td data-label="Email">mona.farid@gmail.com</td>
+              <td data-label="Phone">+20 1213879198</td>
+              <td data-label="Fitness Goal">Weight Loss</td>
+              <td data-label="Start Date">2025-04-10</td>
+              <td data-label="Actions">
+                <button class="edit-btn">Edit</button>
+                <button class="delete-btn">Delete</button>
+              </td>
+            </tr>
+            <tr>
+              <td data-label="Name">Ahmed Salah</td>
+              <td data-label="Email">ahmed.salah@gmail.com</td>
+              <td data-label="Phone">+20 1102572019</td>
+              <td data-label="Fitness Goal">Muscle Gain</td>
+              <td data-label="Start Date">2025-04-18</td>
+              <td data-label="Actions">
+                <button class="edit-btn">Edit</button>
+                <button class="delete-btn">Delete</button>
+              </td>
+            </tr>
+            <tr>
+              <td data-label="Name">Mostafa Ahmed</td>
+              <td data-label="Email">Mostafa.ahmed@gmail.com</td>
+              <td data-label="Phone">+20 1019975698</td>
+              <td data-label="Fitness Goal">General Fitness</td>
+              <td data-label="Start Date">2025-05-01</td>
+              <td data-label="Actions">
+                <button class="edit-btn">Edit</button>
+                <button class="delete-btn">Delete</button>
+              </td>
+            </tr>
+          </tbody>
+    </table>
+</section>
+
+    <script>
+      // Tab Switching Logic (switches between Add Client form and Client List)
+      const tabForm = document.getElementById('tab-form');
+      const tabList = document.getElementById('tab-list');
+      const pageForm = document.getElementById('page-form');
+      const pageList = document.getElementById('page-list');
+
+      // When "Add Client" tab is clicked:
+      tabForm.onclick = function(){
+        tabForm.classList.add('active');     // Highlight current tab
+        tabList.classList.remove('active'); // Remove highlight from other tab
+        pageForm.classList.remove('hidden'); // Show form
+        pageList.classList.add('hidden');   // Hide client list
+      };
+
+      // When "Client List" tab is clicked:
+      tabList.onclick = function(){
+        tabList.classList.add('active');    // Highlight current tab
+        tabForm.classList.remove('active'); // Remove highlight from other tab
+        pageList.classList.remove('hidden'); // Show client list
+        pageForm.classList.add('hidden');   // Hide form
+      };
+    </script>
+>>>>>>> 8b6c166dcc0968e0152f8d76685d7b30eae98ed4
 </body>
 </html>
