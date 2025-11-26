@@ -1,206 +1,288 @@
-/* General page styles */
+/* ===== General Page Styles ===== */
 body {
-  font-family: Arial, sans-serif;   /* Default font */
-  margin: 0;                        /* Remove default spacing */
-  background: #f7f8fa;              /* Light gray background */
+    font-family: Arial, sans-serif; /* Set default font */
+    margin: 0; /* Remove default margin */
+    background: #f7f8fa; /* Light gray background */
+    color: #2b4162; /* Default text color */
 }
 
-/* Header styles */
 header {
-  background: #1d8ccd;              /* Blue background */
-  color: #f4f4f4;                   /* Light text color */
-  padding: 16px 0 8px;              /* Top, right/left, bottom padding */
-  text-align: center;               /* Centered text */
+    background: #1d8ccd; /* Header background color */
+    color: #f4f4f4; /* Header text color */
+    padding: 16px 0 8px; /* Top and bottom padding */
+    text-align: center; /* Center header text */
+    
+    display: flex; /* Flex layout for header */
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center;  /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
+    width: 100%; /* Full width */
+    box-sizing: border-box; /* Include padding in width */
 }
 
-/* Navigation bar */
+.header-content {
+    text-align: center;   /* Center content inside header */
+    max-width: 1000px;    /* Limit max width */
+    width: 100%; /* Full width */
+}
+
+.header-main h1 {
+    margin: 0; /* Remove default margin */
+    font-size: 2.2rem; /* Large heading size */
+    font-weight: bold; /* Bold heading */
+    letter-spacing: 1px; /* Space between letters */
+}
+
+.header-content .subheading {
+    margin: 3px 0 0 0; /* Small margin above */
+    font-size: 1rem; /* Normal font size */
+    font-weight: 400; /* Regular weight */
+    color: #e0f2ff;  /* Light blue subheading */
+}
+
 nav {
-  margin-top: 8px;
+    margin-top: 12px; /* Space above nav */
 }
 
-/* Navigation buttons */
 nav button {
-  background: #fff;                 /* White background */
-  color: #2b4162;                   /* Dark text */
-  border: none;                     /* No border */
-  padding: 8px 18px;                /* Button padding */
-  font-size: 1rem;                  /* Normal font size */
-  cursor: pointer;                  /* Pointer on hover */
-  margin: 0 5px;                    /* Horizontal spacing */
-  border-radius: 3px 3px 0 0;       /* Rounded top corners */
-  border-bottom: 2px solid transparent; /* Invisible bottom border */
+    background: #fff; /* White button background */
+    color: #2b4162; /* Button text color */
+    border: none; /* Remove border */
+    padding: 8px 18px; /* Button padding */
+    font-size: 1rem; /* Button font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    margin: 0 5px; /* Horizontal spacing */
+    border-radius: 3px 3px 0 0; /* Rounded top corners */
+    border-bottom: 2px solid transparent; /* Bottom border for hover effect */
 }
 
-/* Active tab + Hover effect */
 nav button.active, nav button:hover {
-  border-bottom: 2px solid #1d8ccd; /* Blue underline */
-  color: #1d8ccd;                   /* Blue text */
+    border-bottom: 2px solid #1d8ccd; /* Bottom border on active/hover */
+    color: #1d8ccd; /* Change text color on hover/active */
 }
 
-/* Section container (form or list) */
+/* Adjust nav spacing and transitions */
+nav {
+    margin-top: 8px;
+}
+
+nav button {
+    background: #fff;
+    color: #2b4162;
+    border: none;
+    padding: 8px 18px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin: 25px 5px 0 5px; /* Add top margin for spacing */
+    border-radius: 3px 3px 0 0;
+    border-bottom: 2px solid transparent;
+    transition: 0.2s; /* Smooth hover transition */
+}
+
+nav button.active, nav button:hover {
+    border-bottom: 2px solid #1d8ccd;
+    color: #1d8ccd;
+}
+
+/* ===== Section Container ===== */
 section {
-  max-width: 1050px;                /* Limit width */
-  margin: 32px auto;                /* Center with spacing */
-  padding: 18px;
-  background: #fff;                 /* White background */
-  border-radius: 6px;               /* Rounded corners */
-  box-shadow: 0 2px 8px rgba(180,180,180,0.1); /* Subtle shadow */
+    max-width: 1130px; /* Limit section width */
+    width: 95%; /* Use 95% of parent width */
+    margin: 32px auto; /* Center section with vertical spacing */
+    padding: 20px; /* Internal padding */
+    background: #fff; /* White background */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 3px 10px rgba(0,0,0,0.05); /* Subtle shadow */
 }
 
 /* Hide elements */
 .hidden {
-  display: none;
+    display: none; /* Hide element completely */
 }
 
-/* Client form layout */
+/* ===== Client Form ===== */
 .client-form {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 18px;
-  flex-direction: column;           /* Stack labels vertically */
+    display: flex; /* Flex layout for form */
+    flex-direction: column; /* Stack fields vertically */
+    gap: 16px; /* Space between fields */
 }
 
-/* Each label (field title + input) */
 .client-form label {
-  display: flex;
-  flex-direction: column;           /* Label text above input */
-  font-size: 1rem;
-  color: #2b4162;                   /* Dark blue text */
+    display: flex; /* Flex layout for label */
+    flex-direction: column; /* Stack label and input vertically */
+    font-size: 1rem; /* Label font size */
 }
 
-/* Form inputs and dropdowns */
-.client-form input, .client-form select {
-  padding: 6px 8px;
-  margin-top: 3px;
-  border: 1px solid #d5d7d9;        /* Light border */
-  border-radius: 3px;
-  font-size: 1rem;
+.client-form input,
+.client-form select {
+    padding: 6px 10px; /* Input padding */
+    margin-top: 3px; /* Space above input */
+    border: 1px solid #d5d7d9; /* Light gray border */
+    border-radius: 4px; /* Rounded corners */
+    font-size: 1rem; /* Input font size */
 }
 
-/* Primary button styling */
+/* ===== Buttons ===== */
 .primary-btn {
-  background: #1d8ccd;              /* Blue background */
-  color: #fff;                      /* White text */
-  border: none;
-  padding: 10px 20px;
-  font-weight: bold;
-  font-size: 1.1rem;
-  border-radius: 4px;
-  cursor: pointer;
-  margin-top: 8px;
+    background: #1d8ccd; /* Primary button color */
+    color: #fff; /* White text */
+    border: none; /* Remove border */
+    padding: 10px 20px; /* Button padding */
+    font-weight: bold; /* Bold text */
+    font-size: 1.05rem; /* Slightly larger font */
+    border-radius: 6px; /* Rounded corners */
+    cursor: pointer; /* Pointer on hover */
+    margin-top: 8px; /* Top margin */
+    transition: 0.2s; /* Smooth hover */
 }
 
-/* Search bar above client list */
+.primary-btn:hover {
+    opacity: 0.9; /* Slight fade on hover */
+}
+
+/* ===== Search Bar ===== */
 .search-bar {
-  margin-bottom: 14px;
-  text-align: right;                /* Align right on desktop */
+    margin-bottom: 16px; /* Space below search bar */
+    text-align: right; /* Align search bar to right */
 }
 
-/* Search input field */
 .search-bar input {
-  padding: 6px 12px;
-  width: 100%;              /* Take full width by default */
-  max-width: 300px;         /* Limit width on desktop */
-  border: 1px solid #bdbdbd;
-  border-radius: 3px;
-  font-size: 1rem;
-  box-sizing: border-box;   /* Include padding in width */
+    padding: 6px 12px; /* Input padding */
+    width: 100%; /* Full width */
+    max-width: 300px; /* Limit max width */
+    border: 1px solid #bdbdbd; /* Gray border */
+    border-radius: 4px; /* Rounded corners */
+    font-size: 1rem; /* Input font size */
+    box-sizing: border-box; /* Include padding in width */
 }
 
-/* Responsive search bar (mobile view) */
 @media (max-width: 600px) {
-  .search-bar {
-    text-align: center;     /* Center align on mobile */
-  }
-
-  .search-bar input {
-    width: 90%;             /* Almost full screen */
-    max-width: none;        /* Remove limit */
-  }
+    .search-bar { text-align: center; } /* Center on small screens */
+    .search-bar input { width: 90%; max-width: none; } /* Make input responsive */
 }
 
-/* Table styles */
+/* ===== Table Styles ===== */
 table {
-  width: 100%;
-  border-collapse: collapse; /* Merge borders */
-  /* other styles */
+    width: 100%; /* Full width table */
+    border-collapse: collapse; /* Remove spacing between cells */
+}
+
+th, td {
+    padding: 12px 8px; /* Cell padding */
+    border-bottom: 1px solid #ededed; /* Bottom border */
+    text-align: left; /* Left-align text */
+}
+
+th {
+    color: #2b4162; /* Table header text color */
+    font-weight: bold; /* Bold headers */
+    background: #f6f9fb; /* Header background */
 }
 
 /* Column width adjustments */
-table th:nth-child(3),
-table td:nth-child(3) {
-  min-width: 140px; /* Phone column */
-}
-table th:nth-child(4),
-table td:nth-child(4) {
-  min-width: 140px; /* Fitness goal column */
-}
-table th:nth-child(1),
-table td:nth-child(1) {
-  min-width: 140px; /* Name column */
-}
-table th:nth-child(5),
-table td:nth-child(5) {
-  min-width: 160px; /* Start date column */
+table th:nth-child(1), table td:nth-child(1) { min-width: 140px; } /* Name column */
+table th:nth-child(3), table td:nth-child(3) { min-width: 140px; } /* Phone column */
+table th:nth-child(4), table td:nth-child(4) { min-width: 140px; } /* Goal column */
+table th:nth-child(5), table td:nth-child(5) { min-width: 180px; } /* Start Date column */
+
+/* ===== Action Buttons ===== */
+.action-btn {
+    padding: 6px 10px; /* Button padding */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 0.95rem; /* Slightly smaller font */
+    cursor: pointer; /* Pointer on hover */
+    margin-right: 8px; /* Space between buttons */
+    min-width: 78px; /* Minimum width */
+    display: inline-flex; /* Flex for icons/text */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    white-space: nowrap; /* Prevent text wrapping */
+    transition: 0.2s; /* Smooth hover */
 }
 
-/* Table cell styles */
-th, td {
-  padding: 12px 8px;
-  border-bottom: 1px solid #ededed; /* Light line between rows */
-  text-align: left;
-}
-th {
-  color: #2b4162;                   /* Dark header text */
-  font-weight: bold;
-  background: #f6f9fb;              /* Light gray header background */
+.view-btn.action-btn { background: #cb82d0; color: #fff; } /* View button color */
+.edit-btn.action-btn { background: #cbcb45; color: #fff; } /* Edit button color */
+.delete-btn.action-btn { background: #f83f3f; color: #fff; } /* Delete button color */
+
+/* ================= Center "Actions" header above buttons ================= */
+th[data-label="Actions"] {
+    display: flex; /* Flex for centering */
+    flex-direction: column; /* Stack vertically */
+    justify-content: center;  /* Vertical centering */
+    align-items: center;      /* Horizontal centering */
+    text-align: center; 
+    padding: 12px 8px; /* Match other headers */
 }
 
-/* Edit/Delete button styles */
-.edit-btn, .delete-btn {
-  padding: 5px 12px;
-  margin-right: 4px;
-  border: none;
-  border-radius: 3px;
-  cursor: pointer;
-}
-.edit-btn {
-  background: #6a8caf;              /* Grayish blue */
-  color: #fff;
-}
-.delete-btn {
-  background: #ff6b6b;              /* Red */
-  color: #fff;
+td[data-label="Actions"] {
+    display: flex; /* Flex layout for buttons */
+    gap: 6px; /* Space between buttons */
+    align-items: center; /* Vertically center */
+    justify-content: center; /* Horizontally center */
+    flex-wrap: wrap; /* Wrap on small screens */
 }
 
-/* Responsive table for mobile */
+/* Ensure action buttons don't stretch too much */
+td[data-label="Actions"] .action-btn {
+    min-width: 60px;
+    padding: 6px 10px;
+    font-size: 0.95rem;
+}
+
+@media (max-width: 420px) {
+    td[data-label="Actions"] {
+        justify-content: flex-start; /* Align buttons left on narrow screens */
+    }
+}
+
+/* ===== Training History & Exercises ===== */
+#training-history li {
+    margin-bottom: 6px; /* Space between items */
+    padding: 6px 12px; /* Item padding */
+    background: #f5f5f5; /* Light gray background */
+    border-left: 3px solid #2b4162; /* Left colored border */
+    border-radius: 4px; /* Rounded corners */
+    font-size: 0.95rem; /* Slightly smaller font */
+}
+
+#exercises-next > div > button {
+    display: block; /* Full width button */
+    width: 100%;
+    background: #f8f9fa; /* Light gray background */
+    border: 1px solid #bdbdbd; /* Gray border */
+    border-radius: 8px; /* Rounded corners */
+    padding: 10px 15px; /* Button padding */
+    text-align: left; /* Align text left */
+    cursor: pointer; /* Pointer cursor */
+    transition: all 0.2s; /* Smooth hover */
+    margin-bottom: 6px; /* Space below button */
+}
+
+#exercises-next > div > button:hover {
+    background: #e1e7f0; /* Slight hover background */
+    transform: scale(1.02); /* Slight scale effect */
+}
+
+/* ===== Responsive Table for Mobile ===== */
 @media (max-width: 650px) {
-  section {
-      padding: 10px;                /* Smaller padding */
-  }
-  table, thead, tbody, th, td, tr {
-      display: block;               /* Convert table to blocks */
-  }
-  tr {
-      margin-bottom: 14px;
-      background: #fafbfc;
-      border-radius: 5px;
-      box-shadow: 0 1px 3px #ddd;
-      padding: 8px 0;
-  }
-  th {
-      display: none;                /* Hide table headers */
-  }
-  td {
-      position: relative;
-      padding-left: 40%;            /* Leave space for label */
-  }
-  td::before {
-      content: attr(data-label);    /* Show column label before value */
-      position: absolute;
-      left: 10px;
-      font-weight: bold;
-      color: #888;
-      min-width: 120px;
-  }
+    section { padding: 10px; } /* Reduce section padding */
+    table, thead, tbody, th, td, tr { display: block; } /* Stack table */
+    tr {
+        margin-bottom: 14px; /* Space between rows */
+        background: #fafbfc; /* Row background */
+        border-radius: 5px; /* Rounded rows */
+        box-shadow: 0 1px 3px #ddd; /* Subtle shadow */
+        padding: 8px 0; /* Row padding */
+    }
+    th { display: none; } /* Hide headers */
+    td { position: relative; padding-left: 40%; } /* Space for pseudo label */
+    td::before {
+        content: attr(data-label); /* Show column name */
+        position: absolute;
+        left: 10px; /* Left padding */
+        font-weight: bold; /* Bold text */
+        color: #888; /* Gray color */
+        min-width: 120px; /* Minimum label width */
+    }
 }
